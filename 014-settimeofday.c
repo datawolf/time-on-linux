@@ -16,7 +16,7 @@ int main(int argc, char **argv)
     printf("tz_minuteswest : %d\n", tz.tz_minuteswest);
     printf("tz_dsttime : %d\n", tz.tz_dsttime );
 
-    tv.tv_sec += 60*60;
+    tv.tv_sec -= 60*60;
     tz.tz_minuteswest -= 1;
     
     state = settimeofday(&tv, &tz);
